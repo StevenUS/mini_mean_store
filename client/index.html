@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="app">
+    <head>
+        <meta charset="utf-8">
+        <title>Orders</title>
+    <style media="screen">
+        .product{
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            border: 1px solid black;
+        }
+            .product img{
+                width: 40px;
+                margin-left: 20px;
+            }
+            .product p{
+                margin: 5px;
+            }
+        table{
+        }
+        table th{
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            padding: 5px;
+        }
+        table td{
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+    <script src="angular/angular.js"></script>
+    <script src="angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="./controllers/productController.js"></script>
+    <script src="./factories/productFactory.js"></script>
+    <script src="./controllers/customerController.js"></script>
+    <script src="./factories/customerFactory.js"></script>
+    <script src="./controllers/orderController.js"></script>
+    <script src="./factories/orderFactory.js"></script>
+    </head>
+    <body>
+        <h1>mini MEAN store</h1>
+        <div id="nav_links">
+            <a href="#/products">products</a> |
+            <a href="#/customers">customers</a> |
+            <a href="#/orders">orders</a>
+        </div>
+        <div ng-view></div>
+    </body>
+</html>
