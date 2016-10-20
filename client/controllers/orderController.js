@@ -18,7 +18,6 @@ app.controller("orderController", function($scope, customerFactory, productFacto
     $scope.showProducts();
     $scope.showOrders();
 
-    //create an order
     $scope.create = function(){
         var order = {
             _products: $scope.product._id,
@@ -36,7 +35,6 @@ app.controller("orderController", function($scope, customerFactory, productFacto
             })
         })
     }
-    //update product qty
 
     $scope.prodQty = function(product){
         $scope.quantity = product.qty;

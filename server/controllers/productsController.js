@@ -15,8 +15,7 @@ module.exports = (function(){
             Product.create(req.body, function(err, result){
                 if(err){
                     return res.json(err);
-                }
-                res.json(result);
+                }res.json(result);
             })
         },
         update : function(req,res){
@@ -28,8 +27,7 @@ module.exports = (function(){
                     product.save(function(err, product){
                         if(err){
                             return res.json(err)
-                        }
-                            res.json(product);
+                        }res.json(product);
                     })
                 }
             })

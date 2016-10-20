@@ -1,0 +1,22 @@
+
+<h2>Products</h2>
+<button type="button" ng-click="increaseProductLimit()">show more</button>
+<button type="button" ng-click="decreaseProductLimit()">show less</button>
+<p></p>
+<div ng-repeat="product in products | limitTo: productLimit" class=product>
+    <img ng-src="{{product.image}}" alt="prod image"/>
+    <p>{{product.name}}</p>
+    <p>{{product.qty}} remaining</p>
+</div>
+<h2>Recent Orders</h2><button type="button" ng-click="increaseOrderLimit()">show more</button>
+<button type="button" ng-click="decreaseOrderLimit()">show less</button>
+<div ng-repeat="order in orders | limitTo: orderLimit">
+    <p>{{order._customer.name}} purchased {{order.qty}} {{order._products.name}} {{toEpoch(order.createdAt) | humanizeRelativeTime}}...</p>
+</div>
+
+<h2>New Customers</h2>
+<button type="button" ng-click="increaseCustomerLimit()">show more</button>
+<button type="button" ng-click="decreaseCustomerLimit()">show less</button>
+<div ng-repeat="customer in customers | limitTo: customerLimit">
+    <p>{{customer.name}} joined the store {{toEpoch(customer.createdAt) | humanizeRelativeTime}}...</p>
+</div>

@@ -1,4 +1,4 @@
-var app = angular.module("app", ["ngRoute"]);
+var app = angular.module("app", ["ngRoute", "angular-humanize"]);
 app.config(function($routeProvider){
     $routeProvider
     .when("/products", {
@@ -13,10 +13,16 @@ app.config(function($routeProvider){
         templateUrl: "/partials/orders.html",
         controller: "orderController"
     })
+    .when("/dashboard", {
+        templateUrl: "/partials/dashboard.html",
+        controller: "dashController"
+    })
     .otherwise({
         redirectTo: "/"
     })
 })
+
+//filter for quantity drop down on orders
 .filter('range', function(){
     return function(n) {
         var res = [];

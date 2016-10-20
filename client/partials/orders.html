@@ -26,6 +26,6 @@
         <td>{{order._customer.name}}</td>
         <td>{{order._products.name}}</td>
         <td>{{order.qty}}</td>
-        <td>{{order.createdAt}}</td>
+        <td>{{order.createdAt | date: 'short'}}</td>
     </tr>
 </table>

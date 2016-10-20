@@ -32,6 +32,8 @@
     </style>
     <script src="angular/angular.js"></script>
     <script src="angular-route/angular-route.js"></script>
+    <script src="humanize/humanize.js"></script>
+    <script src="angularjs-humanize/src/angular-humanize.js"></script>
     <script src="app.js"></script>
     <script src="./controllers/productController.js"></script>
     <script src="./factories/productFactory.js"></script>
@@ -39,13 +41,16 @@
     <script src="./factories/customerFactory.js"></script>
     <script src="./controllers/orderController.js"></script>
     <script src="./factories/orderFactory.js"></script>
+    <script src="./controllers/dashController.js"></script>
+    
     </head>
     <body>
         <h1>mini MEAN store</h1>
         <div id="nav_links">
             <a href="#/products">products</a> |
             <a href="#/customers">customers</a> |
-            <a href="#/orders">orders</a>
+            <a href="#/orders">orders</a> |
+            <a href="#/dashboard">dashboard</a>
         </div>
         <div ng-view></div>
     </body>
